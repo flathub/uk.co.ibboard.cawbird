@@ -76,8 +76,8 @@
         {
           "type":"git",
           "url":"https://github.com/IBBoard/cawbird.git",
-          "tag":"v1.2.0-2",
-          "commit": "c65bb57ab120f964c3014c0f48f9ef8316fb4ee8"
+          "tag":"v1.2.1",
+          "commit": "d315e6fb661ca3bc2e11879fd116391dbeb8b683"
         }
       ]
     }
