@@ -70,14 +70,27 @@
       ]
     },
     {
+    	"name":"oauth",
+      "config-opts":[
+        "--enable-nss"
+      ],
+    	"sources":[
+    		{
+    			"type":"archive",
+    			"url":"http://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz",
+    			"sha256":"0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
+    		}
+    	]
+    },
+    {
       "name":"cawbird",
       "buildsystem":"meson",
       "sources":[
         {
           "type":"git",
           "url":"https://github.com/IBBoard/cawbird.git",
-          "tag":"v1.2.1",
-          "commit": "d315e6fb661ca3bc2e11879fd116391dbeb8b683"
+          "tag":"v1.3",
+          "commit": "f3912e3f6e0759f579c48fe50f4f86168cc7d0ca"
         }
       ]
     }
