@@ -85,6 +85,9 @@
     {
       "name":"cawbird",
       "buildsystem":"meson",
+      "config-opts": [
+        "--buildtype=plain"
+      ],
       "sources":[
         {
           "type":"git",
