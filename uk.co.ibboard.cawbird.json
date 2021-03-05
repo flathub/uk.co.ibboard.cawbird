@@ -92,8 +92,7 @@
         {
           "type":"git",
           "url":"https://github.com/IBBoard/cawbird.git",
-          "tag":"v1.3.2",
-          "commit": "67a8343a1c2df627ed6dc1cfd566bb7bb4e872ac"
+          "branch": "bug297-flatpak-not-translating"
         }
       ]
     }
