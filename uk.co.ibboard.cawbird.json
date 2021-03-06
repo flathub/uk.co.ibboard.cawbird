@@ -41,8 +41,8 @@
       "sources":[
         {
           "type":"archive",
-          "url":"https://github.com/AbiWord/enchant/releases/download/v2.2.11/enchant-2.2.11.tar.gz",
-          "sha256":"a29c5777c4e45fcac2595c15c49d6d2aa434fa5e7c993dff3f9f367b65fe472a"
+          "url":"https://github.com/AbiWord/enchant/releases/download/v2.2.15/enchant-2.2.15.tar.gz",
+          "sha256":"3b0f2215578115f28e2a6aa549b35128600394304bd79d6f28b0d3b3d6f46c03"
         }
       ]
     },
@@ -64,8 +64,8 @@
       "sources":[
         {
           "type":"archive",
-          "url":"https://download.gnome.org/sources/gspell/1.8/gspell-1.8.4.tar.xz",
-          "sha256":"cf4d16a716e813449bd631405dc1001ea89537b8cdae2b8abfb3999212bd43b4"
+          "url":"https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+          "sha256":"dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd"
         }
       ]
     },
@@ -86,14 +86,15 @@
       "name":"cawbird",
       "buildsystem":"meson",
       "config-opts": [
-        "--buildtype=plain"
+        "--buildtype=plain",
+        "-Dconsumer_key_base64=VmY5dG9yRFcyWk93MzJEZmhVdEk5Y3NMOA==",
+        "-Dconsumer_secret_base64=MThCRXIxbWRESDQ2Y0podzVtVU13SGUyVGlCRXhPb3BFRHhGYlB6ZkpybG5GdXZaSjI="
       ],
       "sources":[
         {
           "type":"git",
           "url":"https://github.com/IBBoard/cawbird.git",
-          "tag":"v1.3.2",
-          "commit": "67a8343a1c2df627ed6dc1cfd566bb7bb4e872ac"
+          "branch":"master"
         }
       ]
     }
