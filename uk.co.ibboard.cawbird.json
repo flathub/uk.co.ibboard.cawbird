@@ -87,14 +87,15 @@
       "buildsystem":"meson",
       "config-opts": [
         "--buildtype=plain",
-        "-Dconsumer_key_base64=VmY5dG9yRFcyWk93MzJEZmhVdEk5Y3NMOA==",
-        "-Dconsumer_secret_base64=MThCRXIxbWRESDQ2Y0podzVtVU13SGUyVGlCRXhPb3BFRHhGYlB6ZkpybG5GdXZaSjI="
+        "-Dconsumer_key_base64=REx3QVhFYjdGajZyWlg1WmROc2JESXlhbw==",
+        "-Dconsumer_secret_base64=U3dYMW81YW91ZUJPTUFQYXpJYUZxTnhFcWp3eldoMWhaQlFIcExvUFVzWnVpM08yVWM="
       ],
       "sources":[
         {
           "type":"git",
           "url":"https://github.com/IBBoard/cawbird.git",
-          "branch":"master"
+          "tag":"v1.4",
+          "commit": "6e304a784b29d698a1129eb5d771b56333132ac3"
         }
       ]
     }
