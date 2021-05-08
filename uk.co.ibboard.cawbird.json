@@ -1,127 +1,127 @@
 {
-  "app-id":"uk.co.ibboard.cawbird",
-  "runtime":"org.gnome.Platform",
-  "runtime-version":"3.38",
-  "sdk":"org.gnome.Sdk",
-  "command":"cawbird",
-  "finish-args":[
-    "--share=ipc",
-    "--share=network",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--socket=pulseaudio"
-  ],
-  "cleanup":[
-    "/include",
-    "/share/gir-1.0",
-    "/lib/pkgconfig",
-    "/lib/girepository-1.0",
-    "/share/vala-0.34",
-    "/bin/vala*",
-    "/bin/vapi*",
-    "/share/devhelp",
-    "/share/aclocal",
-    "/lib/*.la",
-    "/lib/libvala*",
-    "/lib/vala-0.34",
-    "/share/gtk-doc",
-    "/share/man",
-    "/share/vala"
-  ],
-  "modules":[
-    {
-      "name":"enchant",
-      "config-opts":[
-        "--disable-static",
-        "--with-myspell-dir=/usr/share/hunspell"
-      ],
-      "cleanup":[
-        "/bin"
-      ],
-      "sources":[
+    "app-id": "uk.co.ibboard.cawbird",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.38",
+    "sdk": "org.gnome.Sdk",
+    "command": "cawbird",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio"
+    ],
+    "cleanup": [
+        "/include",
+        "/share/gir-1.0",
+        "/lib/pkgconfig",
+        "/lib/girepository-1.0",
+        "/share/vala-0.34",
+        "/bin/vala*",
+        "/bin/vapi*",
+        "/share/devhelp",
+        "/share/aclocal",
+        "/lib/*.la",
+        "/lib/libvala*",
+        "/lib/vala-0.34",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/vala"
+    ],
+    "modules": [
         {
-          "type":"archive",
-          "url":"https://github.com/AbiWord/enchant/releases/download/v2.2.15/enchant-2.2.15.tar.gz",
-          "sha256":"3b0f2215578115f28e2a6aa549b35128600394304bd79d6f28b0d3b3d6f46c03",
-          "x-checker-data": {
-            "type": "anitya",
-            "project-id": "6601",
-            "url-template": "https://github.com/AbiWord/enchant/releases/download/v$version/enchant-$version.tar.gz"
-          }
-        }
-      ]
-    },
-    {
-      "name":"rest",
-      "sources":[
+            "name": "enchant",
+            "config-opts": [
+                "--disable-static",
+                "--with-myspell-dir=/usr/share/hunspell"
+            ],
+            "cleanup": [
+                "/bin"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/AbiWord/enchant/releases/download/v2.2.15/enchant-2.2.15.tar.gz",
+                    "sha256": "3b0f2215578115f28e2a6aa549b35128600394304bd79d6f28b0d3b3d6f46c03",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": "6601",
+                        "url-template": "https://github.com/AbiWord/enchant/releases/download/v$version/enchant-$version.tar.gz"
+                    }
+                }
+            ]
+        },
         {
-          "type":"archive",
-          "url":"https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
-          "sha256":"0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9",
-          "x-checker-data": {
-	    "type": "gnome",
-	    "name": "rest",
-	    "stable-only": false
-	  }
-        }
-      ]
-    },
-    {
-      "name":"gspell",
-      "config-opts":[
-        "--enable-vala=yes"
-      ],
-      "sources":[
+            "name": "rest",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
+                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "rest",
+                        "stable-only": false
+                    }
+                }
+            ]
+        },
         {
-          "type":"archive",
-          "url":"https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
-          "sha256":"dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd",
-          "x-checker-data": {
-	    "type": "gnome",
-	    "name": "gspell",
-	    "stable-only": false
-	  }
-        }
-      ]
-    },
-    {
-    	"name":"oauth",
-      "config-opts":[
-        "--enable-nss"
-      ],
-    	"sources":[
-    		{
-    			"type":"archive",
-    			"url":"http://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz",
-    			"sha256":"0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f",
-    			"x-checker-data": {
-			    "type": "anitya",
-			    "project-id": "1686",
-			    "url-template": "http://downloads.sourceforge.net/liboauth/liboauth-$version.tar.gz"
-			}
-    		}
-    	]
-    },
-    {
-      "name":"cawbird",
-      "buildsystem":"meson",
-      "config-opts": [
-        "--buildtype=plain",
-        "-Dconsumer_key_base64=VmY5dG9yRFcyWk93MzJEZmhVdEk5Y3NMOA==",
-        "-Dconsumer_secret_base64=MThCRXIxbWRESDQ2Y0podzVtVU13SGUyVGlCRXhPb3BFRHhGYlB6ZkpybG5GdXZaSjI="
-      ],
-      "sources":[
+            "name": "gspell",
+            "config-opts": [
+                "--enable-vala=yes"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gspell/1.9/gspell-1.9.1.tar.xz",
+                    "sha256": "dcbb769dfdde8e3c0a8ed3102ce7e661abbf7ddf85df08b29915e92cd723abdd",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gspell",
+                        "stable-only": false
+                    }
+                }
+            ]
+        },
         {
-          "type":"git",
-          "url":"https://github.com/IBBoard/cawbird.git",
-          "tag":"v1.4",
-          "commit": "6e304a784b29d698a1129eb5d771b56333132ac3",
-          "x-checker-data": {
-		"type": "git",
-		"tag-pattern": "^v([\\d.]+)$"
-	  }
+            "name": "oauth",
+            "config-opts": [
+                "--enable-nss"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz",
+                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": "1686",
+                        "url-template": "http://downloads.sourceforge.net/liboauth/liboauth-$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "cawbird",
+            "buildsystem": "meson",
+            "config-opts": [
+                "--buildtype=plain",
+                "-Dconsumer_key_base64=VmY5dG9yRFcyWk93MzJEZmhVdEk5Y3NMOA==",
+                "-Dconsumer_secret_base64=MThCRXIxbWRESDQ2Y0podzVtVU13SGUyVGlCRXhPb3BFRHhGYlB6ZkpybG5GdXZaSjI="
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/IBBoard/cawbird.git",
+                    "tag": "v1.4.1",
+                    "commit": "b7b83c0662857f0b994eb9b07a68e0d41fae2571",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
