@@ -93,7 +93,7 @@
                 {
                     "type": "archive",
                     "url": "http://downloads.sourceforge.net/liboauth/liboauth-1.0.3.tar.gz",
-                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f",
+                    "sha256": "251a85b3bac687974f360d3796048c20ded3bf0bd69e0d1cfd1db23d013f89ed",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": "1686",
