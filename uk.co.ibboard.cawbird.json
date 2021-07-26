@@ -45,7 +45,7 @@
                     "sha256": "df68063b6c13b245fa7246b0e098a03e74f7a91c6d8947bc5c4f42ce55e2e41d",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": "6601",
+                        "project-id": 6601,
                         "url-template": "https://github.com/AbiWord/enchant/releases/download/v$version/enchant-$version.tar.gz"
                     }
                 }
@@ -96,7 +96,7 @@
                     "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": "1686",
+                        "project-id": 1686,
                         "url-template": "http://downloads.sourceforge.net/liboauth/liboauth-$version.tar.gz"
                     }
                 }
