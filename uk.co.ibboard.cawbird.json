@@ -114,8 +114,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/IBBoard/cawbird.git",
-                    "tag": "v1.5",
-                    "commit": "0a60a0bc38ec92c4edd41275a160e8c24b6cc9d6",
+                    "tag": "v1.5-flatpak",
+                    "commit": "d3843588332f1c19c082a27a02ab151794421f44",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
