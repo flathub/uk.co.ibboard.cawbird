@@ -61,7 +61,7 @@
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "rest",
-                        "stable-only": false
+                        "stable-only": true
                     }
                 }
             ]
@@ -79,7 +79,7 @@
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gspell",
-                        "stable-only": true
+                        "stable-only": false
                     }
                 }
             ]
