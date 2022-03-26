@@ -79,7 +79,7 @@
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gspell",
-                        "stable-only": false
+                        "stable-only": true
                     }
                 }
             ]
@@ -118,7 +118,7 @@
                     "commit": "d3843588332f1c19c082a27a02ab151794421f44",
                     "x-checker-data": {
                         "type": "git",
-                        "tag-pattern": "^v([\\d.]+)$"
+                        "tag-pattern": "^v([\\d.]+-?.*)$"
                     }
                 }
             ]
